@@ -51,7 +51,8 @@ pip install -r requirements.txt
 
 * Arduino board (e.g., MKR WiFi 1010)
 * 6 analog contact sensors
-* 1 load cell with HX711
+* 1 weight pressure sensor
+* 50 ohm, 100ohm Resistors
 * Breadboard and jumper wires
 * USB connection to PC
 
@@ -61,7 +62,7 @@ pip install -r requirements.txt
 
 ### 1. Collect Sensor Data
 
-Edit the `SERIAL_PORT` value in `data_collection.py` to match your Arduino port.
+Edit the `SERIAL_PORT` value in `SerialDataCollector.py` to match your Arduino port.
 
 Run:
 
