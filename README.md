@@ -9,15 +9,15 @@ This project implements a real-time fruit classification system using an Arduino
 
 ```
 
-├── data\_collection.py           # Collects real-time data from Arduino and saves it as CSV
+├── SerialDataCollector.py           # Collects real-time data from Arduino and saves it as CSV
 ├── preprocessing.py             # Cleans, labels, and merges fruit CSVs into a training dataset
-├── server.py                    # TCP server to predict fruit type from incoming sensor data
-├── fruit\_model.pkl              # Trained machine learning model
-├── scaler.pkl                   # Scaler used to normalize input features
-├── label\_encoder.pkl            # Label encoder mapping numeric classes to fruit labels
-├── FruitVisualization.pde      # Processing GUI to visualize prediction with emoji and bars
+├── Updated-Server.py                    # TCP server to predict fruit type from incoming sensor data
+├── fruit\_model(1).pkl              # Trained machine learning model
+├── scaler(1).pkl                   # Scaler used to normalize input features
+├── label\_encoder(1).pkl            # Label encoder mapping numeric classes to fruit labels
+├── specialproject.pde      # Processing GUI to visualize prediction with emoji and bars
 ├── fruit\_csvs/                  # Directory containing individual fruit CSVs (e.g., apple2.csv)
-├── merged\_test.csv              # Final preprocessed dataset ready for training or testing
+├── merged\_with\_other.csv              # Final preprocessed dataset ready for training or testing
 ├── README.md                    # This documentation file
 
 ````
@@ -66,7 +66,7 @@ Edit the `SERIAL_PORT` value in `data_collection.py` to match your Arduino port.
 Run:
 
 ```bash
-python data_collection.py
+python SerialDataCollector.py
 ```
 
 This will log incoming sensor data to a CSV file (e.g., `apple2.csv`) inside the `fruit_csvs/` directory.
@@ -81,13 +81,13 @@ To clean and merge CSVs into a single training dataset:
 python preprocessing.py
 ```
 
-It will output `merged_test.csv` labeled with fruit names, ready for model training.
+It will output `merged_with_other.csv` labeled with fruit names, ready for model training.
 
 ---
 
 ### 3. Train Your Model (Optional)
 
-Train your own classifier using `merged_test.csv`:
+Train your own classifier using `merged_with_other.csv`:
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -96,7 +96,7 @@ import joblib
 import pandas as pd
 
 # Load and preprocess data
-df = pd.read_csv("merged_test.csv")
+df = pd.read_csv("merged_with_other.csv")
 X = df.drop(columns=["Timestamp", "Label"])
 y = df["Label"]
 
@@ -121,7 +121,7 @@ joblib.dump(le, "label_encoder.pkl")
 ### 4. Start the Prediction Server
 
 ```bash
-python server.py
+python Updated-Server.py
 ```
 
 This script:
@@ -135,7 +135,7 @@ This script:
 
 ### 5. Visualize Predictions (Processing)
 
-Open `FruitVisualization.pde` in the Processing IDE and run it.
+Open `specialproject.pde` in the Processing IDE and run it.
 
 This GUI:
 
@@ -201,11 +201,6 @@ Apple: 92.3%
 Orange: 5.6%
 ```
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
@@ -213,9 +208,4 @@ This project is licensed under the MIT License.
 
 For questions or contributions, feel free to open an issue or pull request.
 
-```
-
----
-
-Let me know if you want me to generate a `requirements.txt` file or auto-generate GitHub tags, badges, or demo GIFs for enhanced project presentation.
 ```
