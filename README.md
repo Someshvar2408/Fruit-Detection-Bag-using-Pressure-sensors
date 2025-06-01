@@ -9,7 +9,7 @@ This project implements a real-time fruit classification system using an Arduino
 
 ```
 
-├── SerialDataCollector.py           # Collects real-time data from Arduino and saves it as CSV
+├──SerialDataCollector.py           # Collects real-time data from Arduino and saves it as CSV
 ├── preprocessing.py             # Cleans, labels, and merges fruit CSVs into a training dataset
 ├── Updated-Server.py                    # TCP server to predict fruit type from incoming sensor data
 ├── fruit\_model(1).pkl              # Trained machine learning model
@@ -18,7 +18,7 @@ This project implements a real-time fruit classification system using an Arduino
 ├── specialproject.pde      # Processing GUI to visualize prediction with emoji and bars
 ├── fruit\_csvs/                  # Directory containing individual fruit CSVs (e.g., apple2.csv)
 ├── merged\_with\_other.csv              # Final preprocessed dataset ready for training or testing
-├── README.md                    # This documentation file
+├── Fruit-detection.ipynb         # Machine learning model
 
 ````
 
@@ -69,7 +69,7 @@ Run:
 python SerialDataCollector.py
 ```
 
-This will log incoming sensor data to a CSV file (e.g., `apple2.csv`) inside the `fruit_csvs/` directory.
+This will log incoming sensor data to a CSV file (e.g., `apple.csv`) inside the `fruit_csvs/` directory.
 
 ---
 
@@ -87,7 +87,7 @@ It will output `merged_with_other.csv` labeled with fruit names, ready for model
 
 ### 3. Train Your Model (Optional)
 
-Train your own classifier using `merged_with_other.csv`:
+Use the 'Fruit-detectiojn.ipynb'. You can also train your own classifier using `merged_with_other.csv`:
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
