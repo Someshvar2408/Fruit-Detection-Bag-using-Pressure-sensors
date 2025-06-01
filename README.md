@@ -1,8 +1,4 @@
-Here is your complete `README.md` file in Markdown format, ready to be placed in your GitHub repository:
 
----
-
-```markdown
 # 🍎 Real-Time Fruit Classification using Arduino Sensor Data
 
 This project implements a real-time fruit classification system using an Arduino-based sensor array and a machine learning model. The system collects contact and weight sensor data from fruits, processes it through a trained ML model, and visualizes the prediction with emojis and probabilities using a Processing GUI.
