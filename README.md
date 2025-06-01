@@ -12,12 +12,12 @@ This project implements a real-time fruit classification system using an Arduino
 ├──SerialDataCollector.py           # Collects real-time data from Arduino and saves it as CSV
 ├── preprocessing.py             # Cleans, labels, and merges fruit CSVs into a training dataset
 ├── Updated-Server.py                    # TCP server to predict fruit type from incoming sensor data
-├── fruit\_model(1).pkl              # Trained machine learning model
+├── fruit_model(1).pkl              # Trained machine learning model
 ├── scaler(1).pkl                   # Scaler used to normalize input features
-├── label\_encoder(1).pkl            # Label encoder mapping numeric classes to fruit labels
+├── label_encoder(1).pkl            # Label encoder mapping numeric classes to fruit labels
 ├── specialproject.pde      # Processing GUI to visualize prediction with emoji and bars
-├── fruit\_csvs/                  # Directory containing individual fruit CSVs (e.g., apple2.csv)
-├── merged\_with\_other.csv              # Final preprocessed dataset ready for training or testing
+├── fruit_csvs/                  # Directory containing individual fruit CSVs (e.g., apple2.csv)
+├── merged_with_other.csv              # Final preprocessed dataset ready for training or testing
 ├── Fruit_detection(1).ipynb         # Machine learning model
 
 ````
