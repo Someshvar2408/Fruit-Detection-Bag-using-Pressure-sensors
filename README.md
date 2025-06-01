@@ -18,7 +18,7 @@ This project implements a real-time fruit classification system using an Arduino
 ├── specialproject.pde      # Processing GUI to visualize prediction with emoji and bars
 ├── fruit\_csvs/                  # Directory containing individual fruit CSVs (e.g., apple2.csv)
 ├── merged\_with\_other.csv              # Final preprocessed dataset ready for training or testing
-├── Fruit-detection.ipynb         # Machine learning model
+├── Fruit_detection(1).ipynb         # Machine learning model
 
 ````
 
@@ -87,7 +87,7 @@ It will output `merged_with_other.csv` labeled with fruit names, ready for model
 
 ### 3. Train Your Model (Optional)
 
-Use the 'Fruit-detectiojn.ipynb'. You can also train your own classifier using `merged_with_other.csv`:
+Use the `Fruit-detection(1).ipynb`. You can also train your own classifier using `merged_with_other.csv`:
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
