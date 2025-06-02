@@ -8,7 +8,7 @@ This project implements a real-time fruit classification system using an Arduino
 ## 📁 Repository Structure
 
 ```
-
+├──TCPClient.ino           # Arduino code which acts as TCP Client and sends data to the Server script
 ├──SerialDataCollector.py           # Collects real-time data from Arduino and saves it as CSV
 ├── preprocessing.py             # Cleans, labels, and merges fruit CSVs into a training dataset
 ├── Updated-Server.py                    # TCP server to predict fruit type from incoming sensor data
@@ -35,10 +35,6 @@ This project implements a real-time fruit classification system using an Arduino
 - `pyserial`
 - `scipy`
 
-Install dependencies using:
-```bash
-pip install -r requirements.txt
-````
 
 ### Processing
 
@@ -71,7 +67,7 @@ python SerialDataCollector.py
 ```
 
 This will log incoming sensor data to a CSV file (e.g., `apple.csv`) inside the `fruit_csvs/` directory.
-
+All the individual csv files are attached in the repository which can be downloaded and put together in `fruit_csvs/` directory.
 ---
 
 ### 2. Preprocess Dataset
